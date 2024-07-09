@@ -1,7 +1,7 @@
 {
-  "name": "DunyaMC Launcher",
-  "preductname": "DunyaMC Launcher",
-  "version": "2.0.9",
+  "name": "DunyaMCLauncher",
+  "preductname": "DunyaMCLauncher",
+  "version": "2.0.10",
   "description": "DunyaMC İçin hazırlanmış launcher",
   "main": "src/app.js",
   "author": {
@@ -14,7 +14,7 @@
     "start": "cross-env-shell NODE_ENV=dev electron .",
     "dev": "cross-env-shell DEV_TOOL=open nodemon --exec npm start",
     "build": "node build.js --obf=true --build=platform",
-    "icon": "node build.js --icon=https://raw.githubusercontent.com/luuxis/Selvania-Launcher/master/src/assets/images/icon.png"
+    "icon": "node build.js --icon=https://dunyamc.com.tr/assets/uploads/images/upload/c1T1O10t10X7E1.png"
   },
   "license": "CCANC",
   "nodemonConfig": {
