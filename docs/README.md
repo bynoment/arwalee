@@ -13,8 +13,8 @@ Launcherin Güncel Halini İndirin.
  Plateform | Version |
 | -------- | ---- |
 | Windows x64 | [![Launcher Build](https://github.com/bynoment/arwalee/actions/workflows/build.yml/badge.svg)](https://github.com/bynoment/arwalee/actions/workflows/build.yml) |
-| macOS x64 | `Selvania-Launcher-mac-x64.dmg` |
-| macOS arm64 | `Selvania-Launcher-mac-arm64.dmg` |
+| macOS x64 | `` |
+| macOS arm64 | `` |
 | Linux x64 | [![Launcher Build](https://github.com/bynoment/arwalee/actions/workflows/build.yml/badge.svg)](https://github.com/bynoment/arwalee/actions/workflows/build.yml) |
 
 ---
