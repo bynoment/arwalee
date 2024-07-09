@@ -30,9 +30,9 @@ class Splash {
 
     async startAnimation() {
         let splashes = [
-            { "message": "Je... vie...", "author": "Luuxis" },
-            { "message": "Salut je suis du code.", "author": "Luuxis" },
-            { "message": "Linux n'est pas un os, mais un kernel.", "author": "Luuxis" }
+            { "message": "Bir... Ki...", "author": "Dunyamc.com.tr" },
+            { "message": "Kazmalar hazırmı?.", "author": "Dunyamc.com.tr" },
+            { "message": "Dünyayı ele geçir!.", "author": "Dunyamc.com.tr" }
         ];
         let splash = splashes[Math.floor(Math.random() * splashes.length)];
         this.splashMessage.textContent = splash.message;
@@ -51,14 +51,14 @@ class Splash {
     }
 
     async checkUpdate() {
-        this.setStatus(`Recherche de mise à jour...`);
+        this.setStatus(`Güncellemeler kontrol ediliyor...`);
 
         ipcRenderer.invoke('update-app').then().catch(err => {
-            return this.shutdown(`erreur lors de la recherche de mise à jour :<br>${err.message}`);
+            return this.shutdown(`Güncelleme hatası :<br>${err.message}`);
         });
 
         ipcRenderer.on('updateAvailable', () => {
-            this.setStatus(`Mise à jour disponible !`);
+            this.setStatus(`Güncelleme mevcut !`);
             if (os.platform() == 'win32') {
                 this.toggleProgress();
                 ipcRenderer.send('start-update');
@@ -76,7 +76,7 @@ class Splash {
         })
 
         ipcRenderer.on('update-not-available', () => {
-            console.error("Mise à jour non disponible");
+            console.error("Güncelleme kullanılamıyor");
             this.maintenanceCheck();
         })
     }
@@ -105,10 +105,10 @@ class Splash {
         else if (os == 'linux') latest = this.getLatestReleaseForOS('linux', '.appimage', latestRelease);
 
 
-        this.setStatus(`Mise à jour disponible !<br><div class="download-update">Télécharger</div>`);
+        this.setStatus(`Güncelleme mevcut !<br><div class="download-update">İndiriliyor</div>`);
         document.querySelector(".download-update").addEventListener("click", () => {
             shell.openExternal(latest.browser_download_url);
-            return this.shutdown("Téléchargement en cours...");
+            return this.shutdown("İndiriliyor...");
         });
     }
 
@@ -119,21 +119,21 @@ class Splash {
             this.startLauncher();
         }).catch(e => {
             console.error(e);
-            return this.shutdown("Aucune connexion internet détectée,<br>veuillez réessayer ultérieurement.");
+            return this.shutdown("İnternet bağlantısı algılanmadı,<br>lütfen daha sonra tekrar deneyin.");
         })
     }
 
     startLauncher() {
-        this.setStatus(`Démarrage du launcher`);
+        this.setStatus(`Launcher Başlatılıyor`);
         ipcRenderer.send('main-window-open');
         ipcRenderer.send('update-window-close');
     }
 
     shutdown(text) {
-        this.setStatus(`${text}<br>Arrêt dans 5s`);
+        this.setStatus(`${text}<br>5 saniye içinde kapanıyor`);
         let i = 4;
         setInterval(() => {
-            this.setStatus(`${text}<br>Arrêt dans ${i--}s`);
+            this.setStatus(`${text}<br>Durduruldu ${i--}s`);
             if (i < 0) ipcRenderer.send('update-window-close');
         }, 1000);
     }

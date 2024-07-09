@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\assets\\images",
+    "\\src\\assets\\js",
+    "\\src\\assets\\js\\utils",
+    "\\src\\panels"
   ],
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }

@@ -1,13 +1,13 @@
 {
-  "name": "Selvania-Launcher",
-  "preductname": "Selvania Launcher",
-  "version": "2.0.8",
-  "description": "Launcher Mincraft pour le serveur Selvania",
+  "name": "DunyaMC Launcher",
+  "preductname": "DunyaMC Launcher",
+  "version": "2.0.9",
+  "description": "DunyaMC İçin hazırlanmış launcher",
   "main": "src/app.js",
   "author": {
-    "name": "luuxis, Inc.",
-    "email": "contact@luuxis.fr",
-    "url": "https://github.com/luuxis"
+    "name": "Thx luxis, Arwalee.",
+    "email": "info@dunyamc.com.tr",
+    "url": "https://dunyamc.com.tr"
   },
   "url": "https://dunyamc.com.tr/launcher2",
   "scripts": {
