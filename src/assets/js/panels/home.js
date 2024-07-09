@@ -61,7 +61,7 @@ class Home {
                         <div class="news-content">
                             <div class="bbWrapper">
                                 <p>${News.content.replace(/\n/g, '</br>')}</p>
-                                <p class="news-author">Auteur - <span>${News.author}</span></p>
+                                <p class="news-author">Yazar - <span>${News.author}</span></p>
                             </div>
                         </div>`
                     newsElement.appendChild(blockNews);
@@ -78,12 +78,12 @@ class Home {
                         </div>
                         <div class="date">
                             <div class="day">1</div>
-                            <div class="month">Janvier</div>
+                            <div class="month">Duyuru</div>
                         </div>
                     </div>
                     <div class="news-content">
                         <div class="bbWrapper">
-                            <p>Impossible de contacter le serveur des news.</br>Merci de vérifier votre configuration.</p>
+                            <p>Haberlere ulaşılamıyor.</br>Daha sonra tekrar deneyiniz.</p>
                         </div>
                     </div>`
             newsElement.appendChild(blockNews);
@@ -336,7 +336,7 @@ class Home {
         let year = date.getFullYear()
         let month = date.getMonth() + 1
         let day = date.getDate()
-        let allMonth = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
+        let allMonth = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık']
         return { year: year, month: allMonth[month - 1], day: day }
     }
 }
