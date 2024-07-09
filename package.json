@@ -1,11 +1,11 @@
 {
   "name": "DunyaMC Launcher",
   "preductname": "DunyaMC Launcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DunyaMC İçin hazırlanmış launcher",
   "main": "src/app.js",
   "author": {
-    "name": "Thx luxis, Arwalee.",
+    "name": "Arwalee",
     "email": "info@dunyamc.com.tr",
     "url": "https://dunyamc.com.tr"
   },
