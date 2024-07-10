@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\panels\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\panels\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\panels\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\assets\\js\\panels\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\launcher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\assets\\js\\launcher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\panels\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -39,16 +51,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\assets\\js\\utils\\config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\launcher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\assets\\js\\launcher.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\panels\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\panels\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\panels\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\panels\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -66,11 +70,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "login.js",
+              "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\panels\\login.js",
+              "RelativeDocumentMoniker": "src\\assets\\js\\panels\\login.js",
+              "ToolTip": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\panels\\login.js",
+              "RelativeToolTip": "src\\assets\\js\\panels\\login.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-10T20:46:09.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "home.js",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\panels\\home.js",
               "RelativeDocumentMoniker": "src\\assets\\js\\panels\\home.js",
@@ -78,11 +95,12 @@
               "RelativeToolTip": "src\\assets\\js\\panels\\home.js",
               "ViewState": "AQIAABMAAAAAAAAAAAAnwCsAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-10T20:19:20.779Z"
+              "WhenOpened": "2024-07-10T20:19:20.779Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\docs\\README.md",
               "RelativeDocumentMoniker": "docs\\README.md",
@@ -94,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "settings.js",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\panels\\settings.js",
               "RelativeDocumentMoniker": "src\\assets\\js\\panels\\settings.js",
@@ -102,11 +120,12 @@
               "RelativeToolTip": "src\\assets\\js\\panels\\settings.js",
               "ViewState": "AQIAAHAAAAAAAAAAAAAnwIMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-09T22:53:26.676Z"
+              "WhenOpened": "2024-07-09T22:53:26.676Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "utils.js",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\utils.js",
               "RelativeDocumentMoniker": "src\\assets\\js\\utils.js",
@@ -118,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "build.js",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\build.js",
               "RelativeDocumentMoniker": "build.js",
@@ -130,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "slider.js",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\utils\\slider.js",
               "RelativeDocumentMoniker": "src\\assets\\js\\utils\\slider.js",
@@ -142,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "config.js",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\utils\\config.js",
               "RelativeDocumentMoniker": "src\\assets\\js\\utils\\config.js",
@@ -154,19 +173,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "launcher.js",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\launcher.js",
               "RelativeDocumentMoniker": "src\\assets\\js\\launcher.js",
               "ToolTip": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\launcher.js",
               "RelativeToolTip": "src\\assets\\js\\launcher.js",
-              "ViewState": "AQIAAJkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAH8AAAAAAAAAAAApwJgAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-09T21:37:03.481Z"
+              "WhenOpened": "2024-07-09T21:37:03.481Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "settings.html",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\panels\\settings.html",
               "RelativeDocumentMoniker": "src\\panels\\settings.html",
@@ -178,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "login.html",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\panels\\login.html",
               "RelativeDocumentMoniker": "src\\panels\\login.html",
@@ -190,19 +210,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "home.html",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\panels\\home.html",
               "RelativeDocumentMoniker": "src\\panels\\home.html",
               "ToolTip": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\panels\\home.html",
               "RelativeToolTip": "src\\panels\\home.html",
-              "ViewState": "AQIAACAAAAAAAAAAAAAIwEEAAAAGAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAADgvx0AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-07-09T21:35:40.144Z"
+              "WhenOpened": "2024-07-09T21:35:40.144Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\index.html",
               "RelativeDocumentMoniker": "src\\index.html",
@@ -214,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "index.js",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\src\\assets\\js\\index.js",
               "RelativeDocumentMoniker": "src\\assets\\js\\index.js",
@@ -226,13 +247,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "package.json",
               "DocumentMoniker": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\package.json",
               "RelativeDocumentMoniker": "package.json",
               "ToolTip": "C:\\Users\\csgok\\Desktop\\Selvania-Launcher-master\\Selvania-Launcher-master\\arwalee\\package.json",
               "RelativeToolTip": "package.json",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-07-09T21:21:37.102Z",
               "EditorCaption": ""

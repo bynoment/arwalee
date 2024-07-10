@@ -29,7 +29,7 @@ class Home {
                     <div class="news-header">
                         <img class="server-status-icon" src="assets/images/icon.png">
                         <div class="header-text">
-                            <div class="title">Şu anda herhangi bir haber mevcut değil.</div>
+                            <div class="title">Şu anda herhangi bir haber mevcut degil.</div>
                         </div>
                         <div class="date">
                             <div class="day">1</div>
@@ -263,7 +263,7 @@ class Home {
         });
 
         launch.on('check', (progress, size) => {
-            infoStarting.innerHTML = `Dosyalar doğrulanıyor ${((progress / size) * 100).toFixed(0)}%`
+            infoStarting.innerHTML = `Dosyalar dogrulanıyor ${((progress / size) * 100).toFixed(0)}%`
             ipcRenderer.send('main-window-progress', { progress, size })
             progressBar.value = progress;
             progressBar.max = size;
@@ -304,7 +304,7 @@ class Home {
             ipcRenderer.send('main-window-progress-reset')
             infoStartingBOX.style.display = "none"
             playInstanceBTN.style.display = "flex"
-            infoStarting.innerHTML = `Dosyalar doğrulanıyor`
+            infoStarting.innerHTML = `Dosyalar dogrulanıyor`
             new logger(pkg.name, '#7289da');
             console.log('Close');
         });
@@ -313,7 +313,7 @@ class Home {
             let popupError = new popup()
 
             popupError.openPopup({
-                title: 'Erreur',
+                title: 'Hata',
                 content: err.error,
                 color: 'red',
                 options: true
@@ -325,7 +325,7 @@ class Home {
             ipcRenderer.send('main-window-progress-reset')
             infoStartingBOX.style.display = "none"
             playInstanceBTN.style.display = "flex"
-            infoStarting.innerHTML = `Dosyalar doğrulanıyor`
+            infoStarting.innerHTML = `Dosyalar dogrulanıyor`
             new logger(pkg.name, '#7289da');
             console.log(err);
         });
@@ -336,7 +336,7 @@ class Home {
         let year = date.getFullYear()
         let month = date.getMonth() + 1
         let day = date.getDate()
-        let allMonth = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık']
+        let allMonth = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Agustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık']
         return { year: year, month: allMonth[month - 1], day: day }
     }
 }

@@ -276,7 +276,7 @@ Vous devez également télécharger Visual C++ Redistributable Visual Studio 201
 > httpd -k install        # Installation du serveur web Apache
 > httpd -k start          # Démarrage du serveur web Apache
 ```
-Si des erreurs apparaissent, essayez de les corriger en cherchant sur internet. Pour vérifier que apache fonctionne bien faites Ctrl + shift + echap et allez dans l'onglet services vous devriez voir apache 2.4
+Si des Hatas apparaissent, essayez de les corriger en cherchant sur internet. Pour vérifier que apache fonctionne bien faites Ctrl + shift + echap et allez dans l'onglet services vous devriez voir apache 2.4
 
 - Rendez vous à l'adresse http://localhost:80 pour vérifier l'installation.
 - Si vous voyez écrit "It works!" c'est que Apache est installé et fonctionnel.
@@ -317,7 +317,7 @@ PHPIniDir "C:\php"
 - Entrez les commandes suivante :
 
 ```console
-> httpd -t              # Vérifier la configuration du serveur web Apache. Si vous voyez "Syntax OK" c'est que vous avez bien configuré Apache. Sinon il y a un problème dans votre configuration. Recherchez l'erreur sur internet et corrigez la.
+> httpd -t              # Vérifier la configuration du serveur web Apache. Si vous voyez "Syntax OK" c'est que vous avez bien configuré Apache. Sinon il y a un problème dans votre configuration. Recherchez l'Hata sur internet et corrigez la.
 > httpd -k restart       # Redémarrage du serveur web Apache
 ```
 - Pour vérifier que apache fonctionne bien faites Ctrl + shift + echap et allez dans l'onglet services vous devriez voir apache 2.4

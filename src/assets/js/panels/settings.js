@@ -53,8 +53,8 @@ class Settings {
                 let id = e.target.id
                 if (e.target.classList.contains('account')) {
                     popupAccount.openPopup({
-                        title: 'Connexion',
-                        content: 'Veuillez patienter...',
+                        title: 'Baglanıyor',
+                        content: 'Lütfen bekleyiniz...',
                         color: 'var(--color)'
                     })
 
@@ -72,8 +72,8 @@ class Settings {
 
                 if (e.target.classList.contains("delete-profile")) {
                     popupAccount.openPopup({
-                        title: 'Connexion',
-                        content: 'Veuillez patienter...',
+                        title: 'Baglanıyor',
+                        content: 'Lütfen bekleyiniz...',
                         color: 'var(--color)'
                     })
                     await this.db.deleteData('accounts', id);
@@ -192,7 +192,7 @@ class Settings {
 
         document.querySelector(".java-path-reset").addEventListener("click", async () => {
             let configClient = await this.db.readData('configClient')
-            javaPathInputTxt.value = 'Otomatik olarak seçilmiş java versiyonu. Değiştirmeyiniz.';
+            javaPathInputTxt.value = 'Otomatik olarak seçilmiş java versiyonu. Degiştirmeyiniz.';
             configClient.java_config.java_path = null
             await this.db.updateData('configClient', configClient);
         });
