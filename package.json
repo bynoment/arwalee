@@ -1,6 +1,6 @@
 {
-  "name": "DunyaMC Launcher",
-  "preductname": "DunyaMC Launcher",
+  "name": "DunyaMCLauncher",
+  "preductname": "DunyaMCLauncher",
   "version": "1.0.7",
   "description": "DunyaMC İçin hazırlanmış launcher",
   "main": "src/app.js",
