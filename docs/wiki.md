@@ -254,7 +254,7 @@ ___
 
 Le premier obstacle à l'installation d'Apache sur Windows est que vous ne pouvez pas télécharger les fichiers binaires d'installation directement depuis apache.org. Vous devez cloner et compiler vous-même le code source du serveur HTTP Apache ou télécharger le support d'installation Apache 2.4 d'un tiers.
 
-- Un téléchargement tiers des fichiers binaires est certainement le moyen le plus simple de procéder. C'est pour cela que je vous invite à vous rendre sur le site [apachelounge.org](https://www.apachelounge.com/download/) et à cliquer sur le lien entouré si dessous (2) pour télécharger le support d'installation Apache 2.4.
+- Un İndiriliyor tiers des fichiers binaires est certainement le moyen le plus simple de procéder. C'est pour cela que je vous invite à vous rendre sur le site [apachelounge.org](https://www.apachelounge.com/download/) et à cliquer sur le lien entouré si dessous (2) pour télécharger le support d'installation Apache 2.4.
 Vous devez également télécharger Visual C++ Redistributable Visual Studio 2015-2022 pour cela cliquez sur le lien entouré en rouge (1). Installer Visual C++ Redistributable Visual Studio 2015-2022 pour cela exécutez le programme téléchargé, acceptez les termes d'utilisation et cliquez sur le bouton Installer. Windows vous demander les permissions administrateur cliquez sur le bouton OK.
 
 ![Sélectionner le profile par défault](./images/apachewindowsdownload.png)

@@ -58,7 +58,7 @@ Vous aimez le projet ? Laissez une étoile ⭐ sur le repo !
 
 ---
 
-### **<ins><p align="center">Téléchargement :</p>**
+### **<ins><p align="center">İndiriliyor :</p>**
 
 Vous pouvez télécharger le launcher à partir des [Releases GitHub](../../../releases).
 
