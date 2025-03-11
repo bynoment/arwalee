@@ -1,8 +1,3 @@
-/**
- * @author Luuxis
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
- */
-
 import { changePanel, accountSelect, database, Slider, config, setStatus, popup, appdata, setBackground } from '../utils.js'
 const { ipcRenderer } = require('electron');
 const os = require('os');
@@ -18,6 +13,11 @@ class Settings {
         this.javaPath()
         this.resolution()
         this.launcher()
+    }
+
+    // Minotar API'sinden avatar URL'sini almak
+    async getPlayerAvatar(nick) {
+        return `https://minotar.net/avatar/${nick}/100`; // Minotar avatar URL'si
     }
 
     navBTN() {
@@ -46,6 +46,7 @@ class Settings {
         })
     }
 
+    // Hesapları listeleyen fonksiyon
     accounts() {
         document.querySelector('.accounts-list').addEventListener('click', async e => {
             let popupAccount = new popup()
@@ -67,6 +68,11 @@ class Settings {
                     let configClient = await this.setInstance(account);
                     await accountSelect(account);
                     configClient.account_selected = account.ID;
+
+                    // Minotar'dan avatarı alıyoruz ve profile-image div'ini güncelliyoruz
+                    let avatarUrl = await this.getPlayerAvatar(account.name);  // Avatar URL'sini alıyoruz
+                    document.querySelector(`#${id} .profile-image`).style.backgroundImage = `url(${avatarUrl})`; // Avatarı profil resmine ekliyoruz
+
                     return await this.db.updateData('configClient', configClient);
                 }
 
@@ -324,4 +330,5 @@ class Settings {
         })
     }
 }
+
 export default Settings;

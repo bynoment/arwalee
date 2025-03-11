@@ -3,11 +3,14 @@
     "",
     "\\src",
     "\\src\\assets",
-    "\\src\\assets\\images",
+    "\\src\\assets\\css",
+    "\\src\\assets\\css\\panels",
+    "\\src\\assets\\images\\background\\easterEgg",
     "\\src\\assets\\js",
+    "\\src\\assets\\js\\panels",
     "\\src\\assets\\js\\utils",
-    "\\src\\panels"
+    "\\src\\assets\\js\\windows"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\src\\panels\\settings.html",
   "PreviewInSolutionExplorer": false
 }

@@ -1,7 +1,3 @@
-/**
- * @author Luuxis
- * @license CC-BY-NC 4.0 - https://creativecommons.org/licenses/by-nc/4.0
- */
 import { config, database, logger, changePanel, appdata, setStatus, pkg, popup } from '../utils.js'
 
 const { Launch } = require('minecraft-java-core')
@@ -12,80 +8,96 @@ class Home {
     async init(config) {
         this.config = config;
         this.db = new database();
-        this.news()
-        this.socialLick()
-        this.instancesSelect()
-        document.querySelector('.settings-btn').addEventListener('click', e => changePanel('settings'))
+        this.news();  // Haberleri ilk başta yükleyelim
+        this.socialLick();
+        this.instancesSelect();
+        document.querySelector('.settings-btn').addEventListener('click', e => changePanel('settings'));
+        this.updateAvatar();  // Avatarı sağ üst köşeye ekleyelim
+        this.setupOfflineLogin();  // Offline login kısmı için setup fonksiyonunu çağırıyoruz
+
+        // Yenile butonuna tıklama olayı ekle
+        document.getElementById('refresh-news').addEventListener('click', () => this.news());
+    }
+
+    // Minotar API'sinden avatar URL'sini almak
+    async getPlayerAvatar(nick) {
+        return `https://minotar.net/avatar/${nick}/100`; // Minotar avatar URL'si
+    }
+
+    // Avatarı sağ üst köşeye eklemek için fonksiyon
+    async updateAvatar() {
+        let configClient = await this.db.readData('configClient');
+        let auth = await this.db.readData('accounts', configClient.account_selected);
+        let playerNick = auth.nick; // Seçilen oyuncunun nick'ini alıyoruz
+
+        let avatarUrl = await this.getPlayerAvatar(playerNick); // Minotar API'sinden avatar URL'sini alıyoruz
+
+        // Avatarı sağ üst köşedeki player-head div'ine ekliyoruz
+        document.querySelector(".player-head").style.backgroundImage = `url(${avatarUrl})`;
+    }
+
+    // Offline login işlemi
+    setupOfflineLogin() {
+        let offlineLoginButton = document.querySelector('.connect-offline');
+        offlineLoginButton.addEventListener('click', async () => {
+            let playerNick = document.querySelector('.email-offline').value;  // Girdiği nick'i alıyoruz
+
+            if (playerNick) {
+                let avatarUrl = await this.getPlayerAvatar(playerNick);  // Minotar API'sinden avatar URL'sini alıyoruz
+                document.querySelector(".player-head").style.backgroundImage = `url(${avatarUrl})`;  // Avatarı güncelliyoruz
+
+                // Offline giriş işlemi yapılabilir (örneğin, kullanıcı adı ve avatar verisini kaydetme işlemi)
+                console.log(`Offline giriş yapan oyuncu: ${playerNick}`);
+            } else {
+                alert("Lütfen bir kullanıcı adı giriniz.");
+            }
+        });
     }
 
     async news() {
         let newsElement = document.querySelector('.news-list');
         let news = await config.getNews().then(res => res).catch(err => false);
         if (news) {
+            newsElement.innerHTML = ''; // Önceki haberleri temizle
             if (!news.length) {
                 let blockNews = document.createElement('div');
                 blockNews.classList.add('news-block');
                 blockNews.innerHTML = `
-                    <div class="news-header">
-                        <img class="server-status-icon" src="assets/images/icon.png">
-                        <div class="header-text">
-                            <div class="title">Şu anda herhangi bir haber mevcut degil.</div>
-                        </div>
-                        <div class="date">
-                            <div class="day">1</div>
-                            <div class="month">Duyuru</div>
-                        </div>
-                    </div>
                     <div class="news-content">
-                        <div class="bbWrapper">
-                            <p>Sunucu ile ilgili tüm haberleri buradan takip edebilirsiniz..</p>
-                        </div>
-                    </div>`
+                        <p>Şu anda herhangi bir haber mevcut değil. Sunucu ile ilgili tüm haberleri buradan takip edebilirsiniz.</p>
+                    </div>`;
                 newsElement.appendChild(blockNews);
             } else {
-                for (let News of news) {
-                    let date = this.getdate(News.publish_date)
+                // Haberleri id'ye göre büyükten küçüğe sırala
+                news.sort((a, b) => b.id - a.id);
+
+                news.forEach((item, index) => {
                     let blockNews = document.createElement('div');
                     blockNews.classList.add('news-block');
+
+                    // En yeni 3 haberi renklendir
+                    if (index === 0) {
+                        blockNews.style.backgroundColor = 'rgba(255, 193, 7, 0.2)'; // Sarı
+                    } else if (index === 1) {
+                        blockNews.style.backgroundColor = 'rgba(255, 165, 0, 0.2)'; // Turuncu
+                    } else if (index === 2) {
+                        blockNews.style.backgroundColor = 'rgba(255, 99, 71, 0.2)'; // Kırmızı
+                    }
+
                     blockNews.innerHTML = `
-                        <div class="news-header">
-                            <img class="server-status-icon" src="assets/images/icon.png">
-                            <div class="header-text">
-                                <div class="title">${News.title}</div>
-                            </div>
-                            <div class="date">
-                                <div class="day">Duyuru</div>
-                                <div class="month"></div>
-                            </div>
-                        </div>
                         <div class="news-content">
-                            <div class="bbWrapper">
-                                <p>${News.content.replace(/\n/g, '</br>')}</p>
-                                <p class="news-author">Yazar - <span>${News.author}</span></p>
-                            </div>
-                        </div>`
+                            <p>${item.content}</p>
+                        </div>`;
                     newsElement.appendChild(blockNews);
-                }
+                });
             }
         } else {
             let blockNews = document.createElement('div');
             blockNews.classList.add('news-block');
             blockNews.innerHTML = `
-                <div class="news-header">
-                        <img class="server-status-icon" src="assets/images/icon.png">
-                        <div class="header-text">
-                            <div class="title">Error.</div>
-                        </div>
-                        <div class="date">
-                            <div class="day">1</div>
-                            <div class="month">Duyuru</div>
-                        </div>
-                    </div>
-                    <div class="news-content">
-                        <div class="bbWrapper">
-                            <p>Haberlere ulaşılamıyor.</br>Daha sonra tekrar deneyiniz.</p>
-                        </div>
-                    </div>`
+                <div class="news-content">
+                    <p>Haberlere ulaşılamıyor. Daha sonra tekrar deneyiniz.</p>
+                </div>`;
             newsElement.appendChild(blockNews);
         }
     }
@@ -249,86 +261,6 @@ class Home {
         infoStartingBOX.style.display = "block"
         progressBar.style.display = "";
         ipcRenderer.send('main-window-progress-load')
-
-        launch.on('extract', extract => {
-            ipcRenderer.send('main-window-progress-load')
-            console.log(extract);
-        });
-
-        launch.on('progress', (progress, size) => {
-            infoStarting.innerHTML = `İndiriliyor ${((progress / size) * 100).toFixed(0)}%`
-            ipcRenderer.send('main-window-progress', { progress, size })
-            progressBar.value = progress;
-            progressBar.max = size;
-        });
-
-        launch.on('check', (progress, size) => {
-            infoStarting.innerHTML = `Dosyalar dogrulanıyor ${((progress / size) * 100).toFixed(0)}%`
-            ipcRenderer.send('main-window-progress', { progress, size })
-            progressBar.value = progress;
-            progressBar.max = size;
-        });
-
-        launch.on('estimated', (time) => {
-            let hours = Math.floor(time / 3600);
-            let minutes = Math.floor((time - hours * 3600) / 60);
-            let seconds = Math.floor(time - hours * 3600 - minutes * 60);
-            console.log(`${hours}h ${minutes}m ${seconds}s`);
-        })
-
-        launch.on('speed', (speed) => {
-            console.log(`${(speed / 1067008).toFixed(2)} Mb/s`)
-        })
-
-        launch.on('patch', patch => {
-            console.log(patch);
-            ipcRenderer.send('main-window-progress-load')
-            infoStarting.innerHTML = `Güncelleme yapılıyor...`
-        });
-
-        launch.on('data', (e) => {
-            progressBar.style.display = "none"
-            if (configClient.launcher_config.closeLauncher == 'close-launcher') {
-                ipcRenderer.send("main-window-hide")
-            };
-            new logger('Minecraft', '#36b030');
-            ipcRenderer.send('main-window-progress-load')
-            infoStarting.innerHTML = `Başlatılıyor...`
-            console.log(e);
-        })
-
-        launch.on('close', code => {
-            if (configClient.launcher_config.closeLauncher == 'close-launcher') {
-                ipcRenderer.send("main-window-show")
-            };
-            ipcRenderer.send('main-window-progress-reset')
-            infoStartingBOX.style.display = "none"
-            playInstanceBTN.style.display = "flex"
-            infoStarting.innerHTML = `Dosyalar dogrulanıyor`
-            new logger(pkg.name, '#7289da');
-            console.log('Close');
-        });
-
-        launch.on('error', err => {
-            let popupError = new popup()
-
-            popupError.openPopup({
-                title: 'Hata',
-                content: err.error,
-                color: 'red',
-                options: true
-            })
-
-            if (configClient.launcher_config.closeLauncher == 'close-launcher') {
-                ipcRenderer.send("main-window-show")
-            };
-            ipcRenderer.send('main-window-progress-reset')
-            infoStartingBOX.style.display = "none"
-            playInstanceBTN.style.display = "flex"
-            infoStarting.innerHTML = `Dosyalar dogrulanıyor`
-            new logger(pkg.name, '#7289da');
-            console.log(err);
-        });
     }
 
     getdate(e) {
@@ -340,4 +272,5 @@ class Home {
         return { year: year, month: allMonth[month - 1], day: day }
     }
 }
+
 export default Home;
