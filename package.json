@@ -1,8 +1,8 @@
 {
   "name": "DunyaMCLauncher",
   "preductname": "DunyaMCLauncher",
-  "version": "1.0.9",
-  "description": "DunyaMC İçin hazırlanmış launcher",
+  "version": "1.1.0",
+  "description": "DunyaMC Launcher",
   "main": "src/app.js",
   "author": {
     "name": "Arwalee",
